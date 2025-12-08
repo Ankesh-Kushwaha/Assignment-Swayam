@@ -80,7 +80,8 @@ Node* delNode(Node* root,int val){
     }
 
     //case :3 for 2 child;
-    Node* IS=getinordersuccesor(root->right);
+    Node *IS = getinordersuccesor(root->right);
+     //The in-order successor of a node X is the node with the smallest value greater than X->data.
     root->data=IS->data;
     root->right=delNode(root->right,IS->data);
    }
